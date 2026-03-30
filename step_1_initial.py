@@ -17,8 +17,12 @@ def setup_db():
 
     # 2. Initialize Chroma Client (Persistent)
     client = chromadb.PersistentClient(path=DB_PATH)
+
+    # 3. Remove existing collection for clean setup (Optional)
+    if "products" in client.list_collections():
+        client.delete_collection("products")
     
-    # 3. Create or Get Collection
+    # 4. Create or Get Collection
     collection = client.get_or_create_collection(
         name="products", 
         embedding_function=openai_ef
