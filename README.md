@@ -1,4 +1,4 @@
-# Workshop with HYbrid search and Vector DB
+# Workshop with Hybrid search and Vector DB
 * Python
 * OpenAI
 * ChromaDB
