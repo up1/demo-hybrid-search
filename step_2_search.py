@@ -45,7 +45,7 @@ if __name__ == "__main__":
     
     # Run Pipeline
     product_collection = setup_db()
-    query = "latest apple smartphone"
+    query = "มือถือแอปเปิ้ลรุ่นล่าสุด"  # "latest apple smartphone" in Thai
     results = hybrid_search(product_collection, query, category="Mobile")
     print("\n--- Search Result ---")
     for i in range(len(results['ids'][0])):
